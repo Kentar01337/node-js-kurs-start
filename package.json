@@ -1,0 +1,20 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "```bash\r npm\r npm install -g typescript\r npm install -g lite-server\r ```",
+  "homepage": "https://github.com/jaderbass/typescript-course#readme",
+  "bugs": {
+    "url": "https://github.com/jaderbass/typescript-course/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaderbass/typescript-course.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "c",
+  "scripts": {
+    "test": "^c"
+  }
+}
