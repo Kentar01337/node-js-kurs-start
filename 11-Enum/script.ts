@@ -1,25 +1,31 @@
 /**
- * * Intersection Types ähnlich Extended Interfaces, aber eher
- * * Kombination von TypeAliases (keine echte Erweiterung)
+ * * gibt es nur in TS
+ * * Enum: Liste mit mehreren Vorgaben von konstanten Werten
  */
 
-type User = {
+enum PermissionLevel {
+  STUDENT = 'student',
+  INSTRUCTOR = 'instructor',
+  ADMIN = 'admin',
+  GUEST = 'guest',
+}
+
+interface User {
   name: string,
   age: number,
   courses: string[]
 };
 
-type UserSex = {
-  sex: string
+interface UserExtended extends User {
+  permissionLevel: PermissionLevel;
 };
 
-type UserExtended = User & UserSex;
-
-const user1: User = {
+const user1: UserExtended = {
   name: 'Andreas',
   age: 25,
-  courses: ['C', 'C++', 'Python', 'TypeScript']
-}
+  courses: ['C', 'C++', 'Python', 'TypeScript'],
+  permissionLevel: PermissionLevel.ADMIN,
+};
 
 console.log(user1);
 
@@ -27,7 +33,7 @@ const user2: UserExtended = {
   name: 'Sabine',
   age: 42,
   courses: ['Java', 'C#'],
-  sex: 'female'
-}
+  permissionLevel: PermissionLevel.GUEST,
+};
 
 console.log(user2);
