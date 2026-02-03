@@ -3,6 +3,6 @@ dist/
 out/
 build/
 
-*.js
+
 *.js.map
 package-lock.json
